@@ -4,7 +4,7 @@ import { useBookMark } from "@/stores/surah/useBookMarkStore";
 import { Card } from "../ui/card";
 import { useRouter } from "next/navigation";
 
-export default function SurahBookmark() {
+export default function BookmarkTabs() {
   const bookmarks = useBookMark((s) => s.bookmarks);
   const router = useRouter();
 

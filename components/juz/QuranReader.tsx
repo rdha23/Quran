@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import useSurahSettings from "@/stores/surah/useSurahSettingsStore";
-import AyatActions from "../surah/AyatActions";
+import AyatActions from "../quran/AyatActions";
 import { JuzAyat } from "@/types/juz";
 
 type QuranReaderProps = {

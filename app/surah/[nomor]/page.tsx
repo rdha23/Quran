@@ -3,7 +3,7 @@ import { getSurahByNumber } from "@/lib/api/quran";
 import { ArrowLeft } from "lucide-react";
 
 import SurahClient from "@/components/surah/SurahClient";
-import SurahSettings from "@/components/surah/SurahSettings";
+import SurahSettings from "@/components/quran/QuranSettings";
 import ThemeToggle from "@/components/theme-toggle";
 
 export default async function SurahPage({

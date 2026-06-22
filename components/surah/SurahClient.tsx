@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 import useSurahSettings from "@/stores/surah/useSurahSettingsStore";
 import { SurahDetail } from "@/types/quran";
-import AyatActions from "./AyatActions";
+import AyatActions from "../quran/AyatActions";
 
 export default function SurahClient({ surah }: { surah: SurahDetail }) {
   const showLatin = useSurahSettings((s) => s.showLatin);

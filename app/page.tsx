@@ -1,5 +1,5 @@
 import JuzCard from "@/components/juz/JuzCard";
-import SurahBookmark from "@/components/surah/SurahBookmark";
+import SurahBookmark from "@/components/home/BookmarkTabs";
 import SurahCard from "@/components/surah/SurahCard";
 import SurahSearch from "@/components/surah/SurahSearch";
 import ThemeToggle from "@/components/theme-toggle";

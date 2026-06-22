@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import LastReadBuble from "@/components/surah/LastReadBuble";
+import LastReadBuble from "@/components/quran/LastReadBuble";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({

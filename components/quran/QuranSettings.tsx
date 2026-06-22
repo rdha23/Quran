@@ -14,7 +14,7 @@ import { Label } from "../ui/label";
 import { Switch } from "../ui/switch";
 import useSurahSettings from "@/stores/surah/useSurahSettingsStore";
 
-export default function SurahSettings() {
+export default function QuranSettings() {
   const showLatin = useSurahSettings((s) => s.showLatin);
   const setShowLatin = useSurahSettings((s) => s.setShowLatin);
   const showTranslation = useSurahSettings((s) => s.showTranslation);

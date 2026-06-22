@@ -1,5 +1,5 @@
 import QuranReader from "@/components/juz/QuranReader";
-import SurahSettings from "@/components/surah/SurahSettings";
+import SurahSettings from "@/components/quran/QuranSettings";
 import ThemeToggle from "@/components/theme-toggle";
 import { getJuzDetails } from "@/lib/api/juz";
 import { ArrowLeft } from "lucide-react";
