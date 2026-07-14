@@ -1,7 +1,8 @@
 "use client";
 
 import { useBookMark } from "@/stores/surah/useBookMarkStore";
-import { BookmarkIcon, BookOpenCheck } from "lucide-react";
+import { BookmarkIcon, BookOpenCheck, Scroll } from "lucide-react";
+import Link from "next/link";
 
 type Props = {
   surah: number;
@@ -52,6 +53,14 @@ export default function AyatActions({
             : "text-gray-400 dark:text-gray-500"
         } hover:scale-110`}
       />
+
+      {/* Tafsir */}
+      <Link
+        href={`/tafsir/${surah}/${ayat}?from=${encodeURIComponent(href)}`}
+        className="text-gray-400 hover:scale-110 dark:text-gray-500"
+      >
+        <Scroll className="h-5 w-5 transition-colors duration-200 hover:text-violet-500 dark:hover:text-violet-400" />
+      </Link>
     </div>
   );
 }
