@@ -15,4 +15,5 @@ export type JuzAyat = {
   surahNamaLatin: string;
   surahJumlahAyat: number;
   surahArti: string;
+  audio: Record<string, string>;
 };

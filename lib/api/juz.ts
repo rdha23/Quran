@@ -21,6 +21,7 @@ export async function getJuzDetails(juz: number) {
         surahNamaLatin: surah.namaLatin,
         surahJumlahAyat: surah.jumlahAyat,
         surahArti: surah.arti,
+        audio: a.audio,
       }));
 
     result.push(...ayat);

@@ -94,6 +94,7 @@ export default function QuranReader({ ayat, juzNumber }: QuranReaderProps) {
                 surahName={item.surahNama}
                 href={`/juz/${juzNumber}#ayat-${item.nomorAyat}`}
                 juz={juzNumber}
+                audio={item.audio}
               />
             </div>
           </div>
