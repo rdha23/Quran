@@ -7,8 +7,6 @@ export async function getAllSurah(): Promise<SurahList[]> {
 
   const json = await res.json();
 
-  // console.log("JSON:", json);
-
   return json.data.map((surah: any) => ({
     nomor: surah.nomor,
     nama: surah.nama,
@@ -24,23 +22,17 @@ export async function getSurahByNumber(number: number): Promise<SurahDetail> {
     next: { revalidate: 86400 },
   });
 
-  // console.log("Response:", res);
-
   if (!res.ok) {
     throw new Error("Failed to fetch surah");
   }
 
   const json = await res.json();
 
-  console.log("JSON:", json);
-
   if (!json.data) {
     throw new Error("Surah not found");
   }
 
   const data = json.data;
-
-  // console.log(data.ayat[0]);
 
   return {
     nomor: data.nomor,
