@@ -1,0 +1,43 @@
+.rhap_container {
+  background: transparent;
+  backdrop-filter: none;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  padding: 0;
+}
+
+.dark .rhap_container {
+  background: transparent;
+  border: none;
+}
+
+.rhap_progress-filled {
+  background: hsl(var(--primary));
+}
+
+.rhap_progress-indicator {
+  background: hsl(var(--primary));
+}
+
+.rhap_main-controls-button,
+.rhap_volume-button {
+  color: hsl(var(--primary));
+}
+
+.rhap_main-controls-button:hover,
+.rhap_volume-button:hover {
+  color: hsl(var(--primary));
+  opacity: 0.8;
+}
+
+.rhap_time {
+  color: hsl(var(--primary));
+  font-weight: 500;
+}
+
+.dark .rhap_time {
+  color: rgb(96 165 250); /* sama seperti tombol di dark mode */
+}

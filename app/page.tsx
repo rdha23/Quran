@@ -6,7 +6,7 @@ import ThemeToggle from "@/components/theme-toggle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getJuzList } from "@/lib/api/juz";
 
-import { getAllSurah } from "@/lib/api/quran";
+import { getAllSurah } from "@/lib/api/surah";
 
 export default async function Home() {
   const surah = await getAllSurah();

@@ -1,6 +1,6 @@
 "use client";
 
-import { useBookMark } from "@/stores/surah/useBookMarkStore";
+import { useBookMark } from "@/stores/useBookMarkStore";
 import { Card } from "../ui/card";
 import { useRouter } from "next/navigation";
 

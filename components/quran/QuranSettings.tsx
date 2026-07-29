@@ -12,7 +12,7 @@ import {
 } from "../ui/dropdown-menu";
 import { Label } from "../ui/label";
 import { Switch } from "../ui/switch";
-import useSurahSettings from "@/stores/surah/useSurahSettingsStore";
+import useSurahSettings from "@/stores/useSurahSettingsStore";
 
 export default function QuranSettings() {
   const showLatin = useSurahSettings((s) => s.showLatin);

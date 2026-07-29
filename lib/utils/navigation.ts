@@ -1,4 +1,4 @@
-import { SurahList } from "@/types/quran";
+import { SurahList } from "@/types/surah";
 
 export type NavigationItem = {
   surah: number;

@@ -9,14 +9,14 @@ import {
   CommandItem,
   CommandEmpty,
 } from "@/components/ui/command";
-import { SurahList } from "@/types/quran";
+import { SurahList } from "@/types/surah";
 
 export default function SurahSearch({ surah }: { surah: SurahList[] }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full max-w-xl mt-6">
+    <div className="mt-6 w-full max-w-xl">
       <Command className="rounded-xl border shadow-md">
         <CommandInput
           placeholder="Search surah..."
@@ -38,9 +38,9 @@ export default function SurahSearch({ surah }: { surah: SurahList[] }) {
                   setOpen(false);
                 }}
               >
-                <div className="flex justify-between w-full">
+                <div className="flex w-full justify-between">
                   <span>{s.namaLatin}</span>
-                  <span className="text-gray-400 text-sm">{s.nama}</span>
+                  <span className="text-sm text-gray-400">{s.nama}</span>
                 </div>
               </CommandItem>
             ))}

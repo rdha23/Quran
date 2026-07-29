@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import useSurahSettings from "@/stores/surah/useSurahSettingsStore";
+import useSurahSettings from "@/stores/useSurahSettingsStore";
 import AyatActions from "../quran/AyatActions";
 import { JuzAyat } from "@/types/juz";
 

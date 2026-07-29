@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-import useSurahSettings from "@/stores/surah/useSurahSettingsStore";
-import { SurahDetail } from "@/types/quran";
+import useSurahSettings from "@/stores/useSurahSettingsStore";
+import { SurahDetail } from "@/types/surah";
 import AyatActions from "../quran/AyatActions";
 
 export default function SurahClient({ surah }: { surah: SurahDetail }) {
@@ -66,6 +66,7 @@ export default function SurahClient({ surah }: { surah: SurahDetail }) {
             ayat={ayat.nomorAyat}
             surahName={surah.nama}
             href={`/surah/${surah.nomor}#ayat-${ayat.nomorAyat}`}
+            audio={ayat.audio}
           />
         </div>
       ))}

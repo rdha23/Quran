@@ -1,6 +1,6 @@
 "use client";
 
-import { useBookMark } from "@/stores/surah/useBookMarkStore";
+import { useBookMark } from "@/stores/useBookMarkStore";
 import Link from "next/link";
 
 export default function LastReadBuble() {

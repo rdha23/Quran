@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { getSurahByNumber } from "@/lib/api/quran";
+import { getSurahByNumber } from "@/lib/api/surah";
 import { ArrowLeft } from "lucide-react";
 
 import SurahClient from "@/components/surah/SurahClient";
 import SurahSettings from "@/components/quran/QuranSettings";
 import ThemeToggle from "@/components/theme-toggle";
+import AudioPlayer from "@/components/audio/SurahAudioPlayer";
 
 export default async function SurahPage({
   params,
@@ -72,6 +73,9 @@ export default async function SurahPage({
           </Link>
         )}
       </div>
+
+      {/* Audio Player */}
+      <AudioPlayer surah={surah} />
 
       {/* List Ayat */}
       <SurahClient surah={surah} />

@@ -1,5 +1,5 @@
 import { Tafsir } from "@/types/tafsir";
-import { getSurahByNumber } from "./quran";
+import { getSurahByNumber } from "./surah";
 
 export async function getAyatTafsir(
   surahNumber: number,

@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 
 import ThemeToggle from "@/components/theme-toggle";
 import Link from "next/link";
-import { getAllSurah } from "@/lib/api/quran";
+import { getAllSurah } from "@/lib/api/surah";
 import { getNavigation } from "@/lib/utils/navigation";
 
 type Props = {

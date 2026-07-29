@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { SurahList } from "@/types/quran";
+import { SurahList } from "@/types/surah";
 import { toArabicNumber } from "@/lib/utils/number";
 
 export default function SurahCard({ surah }: { surah: SurahList[] }) {

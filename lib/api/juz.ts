@@ -1,6 +1,6 @@
 import { juzMapping } from "@/data/juz-mapping";
-import { getSurahByNumber } from "./quran";
-import { SurahList } from "@/types/quran";
+import { getSurahByNumber } from "./surah";
+import { SurahList } from "@/types/surah";
 
 export async function getJuzDetails(juz: number) {
   const ranges = juzMapping.filter((item) => item.juz === juz);

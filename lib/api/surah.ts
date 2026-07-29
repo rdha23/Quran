@@ -1,4 +1,4 @@
-import { SurahDetail, SurahList } from "@/types/quran";
+import { SurahDetail, SurahList } from "@/types/surah";
 
 export async function getAllSurah(): Promise<SurahList[]> {
   const res = await fetch("https://equran.id/api/v2/surat", {
@@ -6,6 +6,8 @@ export async function getAllSurah(): Promise<SurahList[]> {
   });
 
   const json = await res.json();
+
+  // console.log("JSON:", json);
 
   return json.data.map((surah: any) => ({
     nomor: surah.nomor,
@@ -22,17 +24,23 @@ export async function getSurahByNumber(number: number): Promise<SurahDetail> {
     next: { revalidate: 86400 },
   });
 
+  // console.log("Response:", res);
+
   if (!res.ok) {
     throw new Error("Failed to fetch surah");
   }
 
   const json = await res.json();
 
+  console.log("JSON:", json);
+
   if (!json.data) {
     throw new Error("Surah not found");
   }
 
   const data = json.data;
+
+  // console.log(data.ayat[0]);
 
   return {
     nomor: data.nomor,
@@ -41,12 +49,8 @@ export async function getSurahByNumber(number: number): Promise<SurahDetail> {
     jumlahAyat: data.jumlahAyat,
     tempatTurun: data.tempatTurun,
     arti: data.arti,
-    ayat: json.data.ayat.map((ayat: any) => ({
-      nomorAyat: ayat.nomorAyat,
-      teksArab: ayat.teksArab,
-      teksLatin: ayat.teksLatin,
-      teksIndonesia: ayat.teksIndonesia,
-    })),
+    audioFull: data.audioFull,
+    ayat: data.ayat,
     suratSelanjutnya: data.suratSelanjutnya,
     suratSebelumnya: data.suratSebelumnya,
   };
