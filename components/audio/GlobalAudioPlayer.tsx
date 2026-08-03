@@ -22,10 +22,19 @@ export default function GlobalAudioPlayer() {
 
   return (
     <div className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl -translate-x-1/2">
-      <div className="bg-background/80 flex items-center gap-6 rounded-2xl border p-4 shadow-lg backdrop-blur-xl">
+      <div className="bg-background/80 relative flex flex-col gap-4 rounded-2xl border p-4 shadow-lg backdrop-blur-xl md:flex-row md:items-center md:gap-6">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="bg-background/70 hover:bg-background absolute top-2 right-2 h-8 w-8 rounded-full backdrop-blur md:-top-3"
+          onClick={() => setCurrentTrack(null)}
+        >
+          <X className="size-4" />
+        </Button>
+
         {/* Info Surah */}
-        <div className="flex min-w-0 items-center gap-4 border-r pr-6">
-          <div className="bg-primary/10 text-primary flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-bold">
+        <div className="flex min-w-0 items-center gap-3 md:border-r md:pr-6">
+          <div className="bg-primary/10 text-primary flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-bold md:h-12 md:w-12">
             {toArabicNumber(currentTrack.surahNumber)}
           </div>
 
@@ -45,13 +54,13 @@ export default function GlobalAudioPlayer() {
         <div className="flex-1">
           <AudioPlayer autoPlayAfterSrcChange src={currentTrack.audio} />
         </div>
-        <Button
+        {/* <Button
           variant="ghost"
           size="icon"
           onClick={() => setCurrentTrack(null)}
         >
           <X className="size-4" />
-        </Button>
+        </Button> */}
       </div>
     </div>
   );

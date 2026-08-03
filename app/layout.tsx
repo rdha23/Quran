@@ -4,6 +4,7 @@ import "./globals.css";
 import LastReadBuble from "@/components/quran/LastReadBuble";
 import { ThemeProvider } from "@/components/theme-provider";
 import GlobalAudioPlayer from "@/components/audio/GlobalAudioPlayer";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,9 +49,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <GlobalAudioPlayer />
-          <LastReadBuble />
+          <TooltipProvider>
+            {children}
+            <GlobalAudioPlayer />
+            <LastReadBuble />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

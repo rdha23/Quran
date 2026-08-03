@@ -61,7 +61,7 @@ export default function AudioPlayer({ surah }: Props) {
         }
       >
         <PlayCircle className="size-5" />
-        <span className="font-medium">Mainkan Surah</span>
+        <span className="hidden font-normal md:inline">Mainkan Surah</span>
       </Button>
     </div>
   );
