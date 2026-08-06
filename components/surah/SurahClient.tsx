@@ -5,27 +5,33 @@ import { useEffect } from "react";
 import useSurahSettings from "@/stores/useSurahSettingsStore";
 import { SurahDetail } from "@/types/surah";
 import AyatActions from "../quran/AyatActions";
+import useAudioStore from "@/stores/useAudioStore";
 
 export default function SurahClient({ surah }: { surah: SurahDetail }) {
   const showLatin = useSurahSettings((s) => s.showLatin);
   const showTranslation = useSurahSettings((s) => s.showTranslation);
+  const setCurrentAyatTrack = useAudioStore((s) => s.setCurrentAyatTrack);
 
   useEffect(() => {
     const hash = window.location.hash;
 
-    if (!hash) return;
+    if (hash) {
+      const element = document.querySelector(hash);
 
-    const element = document.querySelector(hash);
-
-    if (element) {
-      setTimeout(() => {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        });
-      }, 100);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }, 100);
+      }
     }
-  }, []);
+
+    return () => {
+      setCurrentAyatTrack(null);
+    };
+  }, [setCurrentAyatTrack]);
 
   return (
     <>

@@ -40,6 +40,7 @@ const useAudioStore = create<AudioState>()(
     }),
     {
       name: "audio-settings",
+      partialize: (state) => ({ selectedQari: state.selectedQari }),
     },
   ),
 );
